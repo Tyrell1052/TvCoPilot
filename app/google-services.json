@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "653378032120",
+    "project_id": "tvcopilot-5e66c",
+    "storage_bucket": "tvcopilot-5e66c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653378032120:android:82d5a0b7dedc6cabda860d",
+        "android_client_info": {
+          "package_name": "com.example.tvcopilot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653378032120-q8hg2s4p8m33u11urfrb9g0b12gqn6k8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgCx0mZ-JXi2Fo0_XaOsRJpYZyIsqIT74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "653378032120-q8hg2s4p8m33u11urfrb9g0b12gqn6k8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
