@@ -1,4 +1,4 @@
-package com.example.test_retrofit_setup
+package com.example.TvCoPilot
 
 import com.google.gson.annotations.SerializedName
 

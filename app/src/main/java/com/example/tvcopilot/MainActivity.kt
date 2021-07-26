@@ -3,9 +3,9 @@ package com.example.tvcopilot
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.TextView
-import com.example.test_retrofit_setup.APIService
-import com.example.test_retrofit_setup.CountryBO
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,12 +16,14 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var textView: TextView
     lateinit var retrofit: Retrofit
-    lateinit var countryList: List<CountryBO>
+    lateinit var genreList: List<GenreBO>
+    lateinit var spinner: Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         textView = findViewById(R.id.textView)
+        spinner = findViewById(R.id.genre_spinner)
 
         retrofit = Retrofit.Builder()//
             .baseUrl( "https://api.watchmode.com/v1/")//base url
@@ -29,39 +31,17 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         val apiService = retrofit.create(APIService::class.java)//interface for APIService
-        val apiList = apiService.getCountry()
+        val apiList = apiService.getGenre()
 
-        apiList.enqueue(object : Callback<List<CountryBO>> {//use callBack for multi threaded call
-        override fun onFailure(call: Call<List<CountryBO>>, t: Throwable) {//is like error checking for failed response within network
+        apiList.enqueue(object : Callback<List<GenreBO>> {//use callBack for multi threaded call
+        override fun onFailure(call: Call<List<GenreBO>>, t: Throwable) {//is like error checking for failed response within network
             Log.e("ERROR", "FAILED")
         }
 
-            override fun onResponse(call: Call<List<CountryBO>>, response: Response<List<CountryBO>>) {// if this is hit
-                countryList = response.body()!!//needs null check  --> if respnse body null? id not continue
+            override fun onResponse(call: Call<List<GenreBO>>, response: Response<List<GenreBO>>) {// if this is hit
+                genreList = response.body()!!//needs null check  --> if respnse body null? id not continue
 
-                for(country in countryList){//
-                    var content = ""
-                    content += country.country + "\n"
-                    content += country.name + "\n"
-                    content += country.flagPicture + "\n\n"
-                    content += country.country + "\n"
-                    content += country.name + "\n"
-                    content += country.flagPicture + "\n\n"
-                    content += country.country + "\n"
-                    content += country.name + "\n"
-                    content += country.flagPicture + "\n\n"
-
-                    textView.append(content)
-
-
-                }
             }
-
-
         })
     }
-
-
-
-
 }

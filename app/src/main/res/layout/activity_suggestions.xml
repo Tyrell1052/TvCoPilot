@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".Suggestions">
+
+
+    <TextView
+        android:id="@+id/randomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Randomly Selected Title"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="236dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="56dp"
+        android:text="Title Input"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/yearTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toEndOf="@+id/titleTextViewHolder"
+        app:layout_constraintTop_toBottomOf="@+id/randomTextView"
+        app:layout_constraintVertical_bias="0.754" />
+
+    <TextView
+        android:id="@+id/yearTextView"
+        android:layout_width="241dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="84dp"
+        android:text="YearInput "
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/typeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toEndOf="@+id/yearTextViewHolder" />
+
+    <TextView
+        android:id="@+id/typeTextView"
+        android:layout_width="244dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="100dp"
+        android:text="TypeInput "
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toEndOf="@+id/typeTextViewHolder" />
+
+    <TextView
+            android:id="@+id/titleTextViewHolder"
+            android:layout_width="81dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:text="Title:"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="212dp" />
+
+        <TextView
+            android:id="@+id/yearTextViewHolder"
+            android:layout_width="81dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:text="Year:"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/typeTextViewHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextViewHolder"
+            app:layout_constraintVertical_bias="0.517" />
+
+        <TextView
+            android:id="@+id/typeTextViewHolder"
+            android:layout_width="80dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="8dp"
+            android:text="Type:"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="468dp" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:text="Find Another Title"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
