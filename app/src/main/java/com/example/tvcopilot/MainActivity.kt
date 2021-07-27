@@ -1,9 +1,12 @@
 package com.example.tvcopilot
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import android.widget.TextView
 import retrofit2.Call
@@ -18,12 +21,22 @@ class MainActivity : AppCompatActivity() {
     lateinit var retrofit: Retrofit
     lateinit var genreList: List<GenreBO>
     lateinit var spinner: Spinner
+    lateinit var button: Button
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {//? can be nullable
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         textView = findViewById(R.id.textView)
         spinner = findViewById(R.id.genre_spinner)
+        button = findViewById(R.id.searchButton)
+
+        button.setOnClickListener {
+            val genre = spinner.selectedItem as GenreBO
+            val intent = Intent(this, Suggestions:: class.java).apply {
+                putExtra("EXTRA", genre.id)
+            }
+            startActivity(intent)
+        }
 
         retrofit = Retrofit.Builder()//
             .baseUrl( "https://api.watchmode.com/v1/")//base url
@@ -40,8 +53,14 @@ class MainActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<List<GenreBO>>, response: Response<List<GenreBO>>) {// if this is hit
                 genreList = response.body()!!//needs null check  --> if respnse body null? id not continue
-
-            }
-        })
+                arrayAdapter()
     }
+})
+    }
+    fun arrayAdapter(){
+        var adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, genreList)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapter
+    }
+
 }
