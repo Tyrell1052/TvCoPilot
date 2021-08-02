@@ -7,6 +7,14 @@
     android:background="@color/darkerBlue"
     tools:context=".Suggestions">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contacts_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/randomTextView"
