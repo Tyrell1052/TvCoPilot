@@ -21,10 +21,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
+        android:spinnerMode = "dropdown"
         android:id="@+id/genre_spinner"
         android:layout_width="296dp"
         android:layout_height="22dp"
         android:layout_marginBottom="328dp"
+        android:background="@color/white"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/searchButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"

@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         var adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, genreList)//look into overriding simple style
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
+
     }
 
 }
