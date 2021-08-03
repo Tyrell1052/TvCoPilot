@@ -36,5 +36,7 @@ data class TitlesBO(
     val type: String,
 
     @SerializedName("year")
-    val year: Int
+    val year: Int,
+
+    val image: String
 )

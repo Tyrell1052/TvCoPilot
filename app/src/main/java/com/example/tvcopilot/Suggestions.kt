@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -52,5 +54,12 @@ class Suggestions : AppCompatActivity() {
                 typeTextView.text = random.type
             }
         })
+
+//        fun showData(movie: List<ListTitlesBO>){
+//            recyclerView.apply{
+//                layoutManager = LinearLayoutManager(this@Suggestions)
+//                adapter = ListTitlesAdapter
+//            }
+//        }
     }
 }
