@@ -8,6 +8,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+//import kotlinx.android.synthetic.main.layout_title_list_item.view.*
+import kotlin.collections.ArrayList
+import com.example.tvcopilot.TitlesBO
+
+
 
 class ListTitlesAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -25,7 +30,7 @@ class ListTitlesAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder) {
             is TitlesViewHolder -> {
-                holder.bind(items.get(position))
+                holder.bind(items[position])
             }
         }
     }

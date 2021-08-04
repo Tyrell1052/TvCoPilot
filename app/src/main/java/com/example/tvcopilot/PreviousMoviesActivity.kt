@@ -2,16 +2,20 @@ package com.example.tvcopilot
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity.apply
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tvcopilot.databinding.ActivityPreviousMoviesBinding
-import kotlinx.android.synthetic.main.PreviousMovies.*
+//import kotlinx.android.synthetic.main.activity_privious_movies.*
+import org.json.JSONArray
+import org.json.JSONObject
+import java.io.IOException
+import java.io.InputStream
 
 
-class PreviousMovies : AppCompatActivity() {
 
-     lateinit var titlesListAdapter: ListTitlesAdapter
+class PreviousMoviesActivity : AppCompatActivity() {
+
+     private lateinit var titlesListAdapter: ListTitlesAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +24,11 @@ class PreviousMovies : AppCompatActivity() {
 
         initRecyclerView()
         addDataSet()
+
+
     }
+
+
 
     private fun addDataSet(){
         val data = DataSource.createDataSet()
@@ -30,8 +38,8 @@ class PreviousMovies : AppCompatActivity() {
 
     private fun initRecyclerView(){
 
-        ActivityPreviousMoviesBinding.apply {
-             RecyclerView.LayoutManager = LinearLayoutManager(this@PreviousMovies)
+        recycler_view.apply {
+             layoutManager = LinearLayoutManager(this@PreviousMoviesActivity)
 //            val topSpacingDecorator = TopSpacingItemDecoration(30)
 //            addItemDecoration(topSpacingDecorator)
             titlesListAdapter = ListTitlesAdapter()

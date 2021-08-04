@@ -39,4 +39,7 @@ data class TitlesBO(
     val year: Int,
 
     val image: String
-)
+) {
+    constructor(title: String, type: String, year: Int)
+            : this(title, type, year)
+}
