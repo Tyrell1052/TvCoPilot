@@ -4,9 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="10dp"
-    app:cardCornerRadius="2dp"
-    app:cardPreventCornerOverlap="false"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,7 +26,6 @@
             app:layout_constraintTop_toTopOf="parent">
 
 
-
             <TextView
                 android:id="@+id/titleView"
                 android:layout_width="match_parent"
@@ -40,7 +36,7 @@
 
             <TextView
                 android:id="@+id/yearView"
-                android:layout_width="match_parent"
+                android:layout_width="123dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Year"
@@ -48,23 +44,11 @@
 
             <TextView
                 android:id="@+id/typeView"
-                android:layout_width="match_parent"
+                android:layout_width="123dp"
                 android:layout_height="wrap_content"
                 android:text="Type"
                 android:textColor="#000"
                 android:textSize="19sp" />
-
-            <ImageView
-                android:id="@+id/titleImageView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_margin="0dp"
-                android:adjustViewBounds="true"
-                android:padding="0dp"
-                android:scaleType="fitXY"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
         </LinearLayout>
 
