@@ -4,8 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkerBlue"
+    android:background="@drawable/green_polygon"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="414dp"
+        android:layout_height="242dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:srcCompat="@drawable/livingroom" />
 
     <Button
         android:id="@+id/searchButton"
@@ -22,24 +32,27 @@
 
     <Spinner
         android:id="@+id/genre_spinner"
-        android:layout_width="296dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="328dp"
+        android:layout_width="293dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="204dp"
+        android:background="@color/white"
+        android:spinnerMode="dropdown"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/searchButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="Welcome to TvCoPilot"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/genre_spinner"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
