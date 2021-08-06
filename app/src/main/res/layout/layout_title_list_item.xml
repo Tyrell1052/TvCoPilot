@@ -35,20 +35,20 @@
                 android:textSize="19sp" />
 
             <TextView
+                android:id="@+id/typeView"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:textColor="#000"
+                android:textSize="19sp" />
+
+            <TextView
                 android:id="@+id/yearView"
                 android:layout_width="123dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Year"
                 android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/typeView"
-                android:layout_width="123dp"
-                android:layout_height="wrap_content"
-                android:text="Type"
-                android:textColor="#000"
-                android:textSize="19sp" />
 
         </LinearLayout>
 
