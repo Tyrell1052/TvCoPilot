@@ -5,10 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
+import androidx.appcompat.widget.Toolbar
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -38,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        retrofit = Retrofit.Builder()//
+        retrofit = Retrofit.Builder()
             .baseUrl( "https://api.watchmode.com/v1/")//base url
             .addConverterFactory(GsonConverterFactory.create())//converts with Gson --> needs some converter
             .build()
@@ -63,5 +61,4 @@ class MainActivity : AppCompatActivity() {
         spinner.adapter = adapter
 
     }
-
 }

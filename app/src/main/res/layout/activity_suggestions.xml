@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:srcCompact="@drawable/bluegradient"
+    android:background="@drawable/bluegradient"
     tools:context=".Suggestions">
 
 
@@ -97,8 +97,8 @@
 
     <Button
         android:id="@+id/backButton"
-        android:layout_width="137dp"
-        android:layout_height="47dp"
+        android:layout_width="134dp"
+        android:layout_height="61dp"
         android:text="Home"
         android:textColor="@color/white"
         app:cornerRadius="20dp"
@@ -109,8 +109,8 @@
 
     <Button
         android:id="@+id/moreButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="63dp"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="72dp"
         android:text="More Titles"
